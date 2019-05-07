@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "image": "img/author/ilia-repin.jpg",
+    "name": "Илья Репин"
+  },
+  {
+    "id": 2,
+    "image": "img/author/Vrubel.jpg",
+    "name": "Михаил Врубель"
+  },
+  {
+    "id": 3,
+    "image": "img/author/syrikov.jpg",
+    "name": "Василий Суриков"
+  },
+  {
+    "id": 4,
+    "image": "img/author/viktor-vasnetsov.jpg",
+    "name": "Виктор Васнецов"
+  },
+  {
+    "id": 5,
+    "image": "img/author/vetrov-vodkin.jpg",
+    "name": "Кузьма Петров-Водкин"
+  },
+  {
+    "id": 6,
+    "image": "img/author/andrei-rublev.jpg",
+    "name": "Андрей Рублев"
+  },
+  {
+    "id": 7,
+    "image": "img/author/Aivazovsky.jpg",
+    "name": "Иван Айвазовский"
+  },
+  {
+    "id": 8,
+    "image": "img/author/Brjullov.jpg",
+    "name": "Карл Брюллов"
+  },
+  {
+    "id": 9,
+    "image": "img/author/leonardo-da-vinchi.jpg",
+    "name": "Леонардо да Винчи"
+  },
+  {
+    "id": 10,
+    "image": "img/author/dali.jpg",
+    "name": "Сальвадор Дали"
+  },
+  {
+    "id": 11,
+    "image": "img/author/Edvard_Munch.jpg",
+    "name": "Эдвард Мунк"
+  }
+]

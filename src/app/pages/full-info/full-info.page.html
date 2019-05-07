@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title style="text-align: left">{{title}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <img src="../../assets/{{image}}" alt="{{id}}"/>
+    <ion-card-content>
+      <div class="pictures-museum"><span style="font-weight: bold"> Музей: </span> {{museum}}</div>
+      <div class="pictures-date"><span style="font-weight: bold">{{date | labelChange: date.length}} </span> {{date}}</div>
+      <ion-card-title class="pictures-title">{{title}}</ion-card-title>
+      <div class="pictures-text">{{text}}</div>
+      <h6 class="pictures-author">Автор: {{author}}</h6>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
