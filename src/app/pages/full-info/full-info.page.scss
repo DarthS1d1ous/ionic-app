@@ -2,22 +2,14 @@ ion-card{
   margin: 15px;
 }
 
-
-.pictures-title {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 10px;
-  color: black;
-  font-size: 20px;
+div span{
 }
 
-.pictures-author {
-  text-align: center;
-  color: black;
-  margin-top: 10px;
-  font-weight: bold;
+div{
+  color: #ff4704;
+  font-family: Jokerman, fantasy;
+  font-size: 22px;
 }
-
-.pictures-text {
-  margin-top: 10px;
+ion-card-content{
+  background-color: rgba(93,255,195,0.28);
 }

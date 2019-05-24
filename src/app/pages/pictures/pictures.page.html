@@ -1,13 +1,13 @@
 <ion-header>
     <ion-toolbar>
-        <ion-title>{{title}}</ion-title>
+        <ion-title>Characters</ion-title>
     </ion-toolbar>
 </ion-header>
 
 <ion-content>
-    <ion-card *ngFor="let item of items" [routerLink]="['/full-info/']+item.id">
-        <img src="../../assets/{{item.image}}" alt="{{item.id}}"/>
-        <ion-card-title class="pictures-title">{{item.title}}</ion-card-title>
+    <ion-card *ngFor="let item of items, let i = index" (click)="onGoToFullPage(i)">
+        <img src="{{item.image}}"/>
+        <ion-card-title class="pictures-title">{{item.name}}</ion-card-title>
     </ion-card>
 
 </ion-content>

@@ -10,7 +10,6 @@ import {JsonAuthorService} from '../../services/json-author.service';
 })
 export class AuthorPage implements OnInit {
 
-  public  time = 1000;
   public items: any = 0;
   public ITEMS_KEY = 'my-items'
   constructor(public service: JsonAuthorService,
@@ -35,7 +34,6 @@ export class AuthorPage implements OnInit {
   }
   delete(i) {
     this.items.splice(i, 1);
-    alert(this.items.length);
   }
   onGoToNextPage(i) {
     this.router.navigate(['/tabs/pictures'], {

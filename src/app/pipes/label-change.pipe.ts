@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class LabelChangePipe implements PipeTransform {
 
   transform(value: string, args?: number): string {
-    return args > 4 ?  "Годы создания:" :  "Год создания";
+    return value.length ==0 ?  "----" :  value;
   }
 
 }

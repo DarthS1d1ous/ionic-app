@@ -1,47 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {NavController} from '@ionic/angular';
 import {Observable} from 'rxjs';
+import {JsonPicturesService} from "../../services/json-pictures.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
-  selector: 'app-full-info',
-  templateUrl: './full-info.page.html',
-  styleUrls: ['./full-info.page.scss'],
+    selector: 'app-full-info',
+    templateUrl: './full-info.page.html',
+    styleUrls: ['./full-info.page.scss'],
 })
 export class FullInfoPage implements OnInit {
 
-  constructor(public http: HttpClient) {
-    this.loadData();
-  }
-  public image: String;
-  public title: String;
-  public museum: String;
-  public author: String;
-  public text: String;
-  public date:String = '';
-  public id: String;
+    constructor(public http: HttpClient, public service: JsonPicturesService, public activatedRoute: ActivatedRoute) {
+        this.loadData();
+    }
 
-  loadData() {
-    let urlCurrentPage = document.URL.split("/");
-    let id = Number(urlCurrentPage.slice(-1))-1;
-    let data: Observable<any>;
-    data = this.http.get('../../assets/pictures.json');
+    public item: any;
 
-    data.subscribe(result => {
-      let item = result[id];
+    loadData() {
+        this.activatedRoute.queryParams.subscribe(res => {
+                this.item = res;
+        });
+}
 
-      this.title = item["title"];
-      this.image = item["image"];
-      this.museum = item["museum"];
-      this.author = item["author"];
-      this.text = item["text"];
-      this.date = item["date"];
-      this.id = item["id"];
-
-    });
-  }
-
-  ngOnInit() {
-  }
+ngOnInit()
+{
+}
 
 }

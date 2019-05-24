@@ -3,21 +3,29 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title style="text-align: left">{{title}}</ion-title>
+    <ion-title style="text-align: left; margin-left: 40px">{{item.name}}</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
   <ion-card>
-    <img src="../../assets/{{image}}" alt="{{id}}"/>
+    <img src="{{item.image}}"/>
     <ion-card-content>
-      <div class="pictures-museum"><span style="font-weight: bold"> Музей: </span> {{museum}}</div>
-      <div class="pictures-date"><span style="font-weight: bold">{{date | labelChange: date.length}} </span> {{date}}</div>
-      <ion-card-title class="pictures-title">{{title}}</ion-card-title>
-      <div class="pictures-text">{{text}}</div>
-      <h6 class="pictures-author">Автор: {{author}}</h6>
+      <div class="name"><span style="font-weight: bold"> Name: </span> {{item.name | labelChange}} </div>
+      <div class="species"><span style="font-weight: bold"> Species: </span> {{item.species | labelChange}} </div>
+      <div class="gender"><span style="font-weight: bold"> Gender: </span> {{item.gender | labelChange}} </div>
+      <div class="house"> <span style="font-weight: bold"> House: </span> {{item.house | labelChange}} </div>
+      <div class="dateOfBirth"><span style="font-weight: bold"> Date of Birth: </span> {{item.dateOfBirth | labelChange}} </div>
+      <div class="ancestry"><span style="font-weight: bold"> Ancestry: </span> {{item.ancestry | labelChange}} </div>
+      <div class="eyeColour"><span style="font-weight: bold"> Eye colour: </span> {{item.eyeColour | labelChange}} </div>
+      <div class="hairColour"><span style="font-weight: bold"> Hair colour: </span> {{item.hairColour | labelChange}} </div>
+      <div class="patronus"><span style="font-weight: bold"> Patronus: </span> {{item.patronus | labelChange}} </div>
+      <div class="alive"><span style="font-weight: bold"> Alive: </span> {{item.alive | labelChange}} </div>
+      <div class="actor"><span style="font-weight: bold"> Actor: </span> {{item.actor | labelChange}} </div>
+      <div class="patronus"><span style="font-weight: bold"> Patronus: </span> {{item.patronus | labelChange}} </div>
     </ion-card-content>
   </ion-card>
 
 </ion-content>
+

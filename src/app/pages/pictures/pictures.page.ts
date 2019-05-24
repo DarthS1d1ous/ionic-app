@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {JsonPicturesService} from '../../services/json-pictures.service';
 
 
@@ -9,7 +9,7 @@ import {JsonPicturesService} from '../../services/json-pictures.service';
     styleUrls: ['./pictures.page.scss'],
 })
 export class PicturesPage implements OnInit {
-    constructor(public service: JsonPicturesService, public activatedRoute: ActivatedRoute) {
+    constructor(public service: JsonPicturesService, public activatedRoute: ActivatedRoute,  public router: Router) {
         this.loadData();
     }
 
@@ -26,10 +26,16 @@ export class PicturesPage implements OnInit {
             } else {
                 this.service.getData().subscribe((result) => {
                     this.items = result;
-                    this.items =  this.items.filter(element => element.author === res.name);
+                    this.items =  this.items.filter(element => element.name === res.name);
                     this.title = res.name;
                 });
             }
+        });
+    }
+
+    onGoToFullPage(i) {
+        this.router.navigate(['/full-info'], {
+            queryParams: this.items[i]
         });
     }
 

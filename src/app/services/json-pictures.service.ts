@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class JsonPicturesService {
 
-  url = "./assets/pictures.json";
+  url = "http://hp-api.herokuapp.com/api/characters";
 
   constructor(public http: HttpClient) {}
 

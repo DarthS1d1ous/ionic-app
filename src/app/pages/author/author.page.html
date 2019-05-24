@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title style="text-align: center">Авторы</ion-title>
+    <ion-title style="text-align: center">Actors</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -13,7 +13,7 @@
     <ion-fab-list side="bottom">
       <ion-fab-button (click)="loadData()" color="primary">Load</ion-fab-button>
       <ion-fab-button (click)="saveData()" color="success"><ion-icon name="save"></ion-icon></ion-fab-button>
-      <ion-fab-button (click)="getData()" color="tertiary"><ion-icon name="undo"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="getData()" color="tertiary"><ion-icon name="download"></ion-icon></ion-fab-button>
     </ion-fab-list>
   </ion-fab>
 
@@ -21,9 +21,9 @@
     <ion-item-sliding *ngFor="let item of items; let i = index">
       <ion-item (click)="onGoToNextPage(i)">
         <ion-avatar item-left style=" max-width: 100px; max-height: 100px;">
-          <img src="../../assets/{{item.image}}" alt="{{item.id}}">
+          <img src="{{item.image}}">
         </ion-avatar>
-        <ion-label style="margin-left: 5%;"><h2>{{item.name}}</h2></ion-label>
+        <ion-label style="margin-left: 5%;"><h2>{{item.actor}}</h2></ion-label>
       </ion-item>
       <ion-item-options side="start" (ionSwipe)="delete(i)">
         <ion-item-option color="danger" (click)="delete(i)" expandable>
