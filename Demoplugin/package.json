@@ -1,0 +1,17 @@
+{
+  "name": "borschevsky.denis.plugin",
+  "version": "1.0.0",
+  "description": "My first plugin",
+  "cordova": {
+    "id": "borschevsky.denis.plugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "author": "Denis",
+  "license": "ISC"
+}

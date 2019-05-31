@@ -5,6 +5,7 @@
 </ion-header>
 
 <ion-content>
+    <!--<ion-button (click)="makeToast()">Show Toast</ion-button>-->
     <ion-card *ngFor="let item of items, let i = index" (click)="onGoToFullPage(i)">
         <img src="{{item.image}}"/>
         <ion-card-title class="pictures-title">{{item.name}}</ion-card-title>
